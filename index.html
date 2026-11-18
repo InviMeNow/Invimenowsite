@@ -913,7 +913,18 @@
 
     refreshCountdown();
     setInterval(refreshCountdown, 1000);
-  </script>
+  </script><script>
+  // Mengambil parameter dari URL
+  const urlParams = new URLSearchParams(window.location.search);
+  
+  // Membaca nilai dari parameter ?to= atau ?tamu=
+  const namaTamu = urlParams.get('to') || urlParams.get('tamu');
+
+  // Jika ada nama di URL, ganti teks pada elemen id="nama-tamu"
+  if (namaTamu) {
+    document.getElementById('nama-tamu').textContent = namaTamu;
+  }
+</script>
 </body>
 </html>
 
