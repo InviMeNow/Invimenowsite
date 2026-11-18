@@ -686,8 +686,7 @@
 
       <div class="guest-card">
         <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-        <h2 id="nama-tamu"><?= namaTamu ?></h2>
-      </div>
+      <div id="nama-tamu">Nama Tamu Akan Muncul Disini</div>
 
       <button class="btn-pink" id="open-btn">
         <span>Buka Undangan</span>
@@ -913,17 +912,19 @@
 
     refreshCountdown();
     setInterval(refreshCountdown, 1000);
-  </script><script>
-  // Mengambil parameter dari URL
-  const urlParams = new URLSearchParams(window.location.search);
-  
-  // Membaca nilai dari parameter ?to= atau ?tamu=
-  const namaTamu = urlParams.get('to') || urlParams.get('tamu');
-
-  // Jika ada nama di URL, ganti teks pada elemen id="nama-tamu"
-  if (namaTamu) {
-    document.getElementById('nama-tamu').textContent = namaTamu;
-  }
+  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const namaTamu = urlParams.get('to') || urlParams.get('tamu');
+    
+    if (namaTamu) {
+      const targetElement = document.getElementById('nama-tamu');
+      if (targetElement) {
+        targetElement.textContent = namaTamu;
+      }
+    }
+  });
 </script>
 </body>
 </html>
