@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Tasmiyah Aqiqah - Raniya Naureen Zephyra</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-pink: #fceef2;
+            --card-bg: #ffffff;
+            --primary-pink: #b84b70;
+            --secondary-pink: #e598b2;
+            --light-pink-border: #f3d1dc;
+            --text-dark: #3a2e32;
+            --text-muted: #7a666c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-pink);
+            background-image: radial-gradient(#f5dce4 1px, transparent 1px);
+            background-size: 20px 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 24px 16px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(184, 75, 112, 0.08);
+            border-top: 5px solid var(--secondary-pink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 18px;
+            border: 1px solid var(--light-pink-border);
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--primary-pink);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            background-color: #fff9fb;
+        }
+
+        .script-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: var(--primary-pink);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .baby-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+
+        .photo-wrapper {
+            position: relative;
+            width: 190px;
+            height: 230px;
+            margin: 0 auto 24px;
+        }
+
+        .arch-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px 100px 20px 20px;
+            border: 4px solid var(--secondary-pink);
+            padding: 5px;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(184, 75, 112, 0.15);
+            overflow: hidden;
+        }
+
+        .arch-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 94px 94px 15px 15px;
+        }
+
+        .sticker-bow {
+            position: absolute;
+            top: -12px;
+            left: -14px;
+            font-size: 32px;
+            transform: rotate(-20deg);
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+        }
+
+        .sticker-bear {
+            position: absolute;
+            bottom: -10px;
+            right: -16px;
+            font-size: 36px;
+            transform: rotate(10deg);
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+        }
+
+        .event-date-highlight {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-pink);
+            margin-bottom: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: var(--text-dark);
+            border: 1px solid var(--light-pink-border);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg-pink);
+            border-color: var(--secondary-pink);
+        }
+
+        .btn-primary {
+            background: var(--primary-pink);
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 12px rgba(184, 75, 112, 0.25);
+            margin-top: 12px;
+        }
+
+        .btn-primary:hover {
+            background: #9e3b5d;
+            transform: translateY(-1px);
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .countdown-box {
+            background: #fff9fb;
+            border: 1px solid var(--light-pink-border);
+            border-radius: 14px;
+            padding: 12px 6px;
+        }
+
+        .countdown-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-pink);
+            display: block;
+            line-height: 1.1;
+        }
+
+        .countdown-label {
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .quote-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 17px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .quote-source {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary-pink);
+            letter-spacing: 0.5px;
+        }
+
+        .bismillah {
+            font-family: 'Amiri', serif;
+            font-size: 24px;
+            color: var(--primary-pink);
+            margin-bottom: 6px;
+        }
+
+        .salam {
+            font-family: 'Great Vibes', cursive;
+            font-size: 28px;
+            color: var(--primary-pink);
+            margin-bottom: 16px;
+        }
+
+        .intro-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .circle-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-pink);
+            padding: 4px;
+            margin: 0 auto 16px;
+            overflow: hidden;
+        }
+
+        .circle-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .child-order {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: -16px;
+            margin-bottom: 6px;
+        }
+
+        .parents-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-pink);
+            margin-bottom: 24px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--light-pink-border), transparent);
+            margin: 24px 0;
+        }
+
+        .info-block {
+            margin-bottom: 22px;
+        }
+
+        .info-icon {
+            color: var(--primary-pink);
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .info-title {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .info-subvalue {
+            font-size: 13px;
+            color: var(--text-muted);
+            max-width: 320px;
+            margin: 4px auto 0;
+        }
+
+        .turut-mengundang {
+            background: #fff9fb;
+            border: 1px dashed var(--secondary-pink);
+            border-radius: 16px;
+            padding: 20px 16px;
+            margin: 24px 0;
+        }
+
+        .turut-mengundang h4 {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: var(--primary-pink);
+            margin-bottom: 10px;
+        }
+
+        .turut-mengundang ul {
+            list-style: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .turut-mengundang li {
+            margin-bottom: 4px;
+        }
+
+        .decor-row {
+            font-size: 24px;
+            margin: 16px 0;
+            letter-spacing: 12px;
+        }
+
+        .closing-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: var(--secondary-pink);
+            color: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 12px rgba(184, 75, 112, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .music-btn.playing {
+            animation: spin 4s linear infinite;
+            background-color: var(--primary-pink);
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- CARD 1 -->
+        <section class="card">
+            <span class="badge">Undangan Tasyakuran</span>
+            <h1 class="script-title">Tasmiyah dan Aqiqah</h1>
+            <h2 class="baby-name">Raniya Naureen Zephyra</h2>
+
+            <div class="photo-wrapper">
+                <span class="sticker-bow" aria-hidden="true">🎀</span>
+                <div class="arch-frame">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=500&q=80" alt="Raniya Naureen Zephyra">
+                </div>
+                <span class="sticker-bear" aria-hidden="true">🧸</span>
+            </div>
+
+            <div class="event-date-highlight">Minggu, 29 November 2026</div>
+
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Tasyakuran+Tasmiyah+%26+Aqiqah+-+Raniya+Naureen+Zephyra&dates=20261129T013000Z/20261129T050000Z&details=Acara+Tasyakuran+Tasmiyah+dan+Aqiqah+Raniya+Naureen+Zephyra&location=Jl.+HKSN+Komp.+AMD+Permai+Blok+B5+No.120,+Alalak+Utara,+Banjarmasin" target="_blank" rel="noopener" class="btn btn-outline">
+                <i class="fa-regular fa-calendar-plus" style="color: var(--primary-pink);"></i> Simpan Tanggal
+            </a>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-box">
+                    <span class="countdown-num" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD 2 -->
+        <section class="card">
+            <p class="quote-text">
+                “Dan orang-orang yang berkata: ‘Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami sebagai penyenang hati (kami), dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.’”
+            </p>
+            <div class="quote-source">QS. Al-Furqan Ayat 74</div>
+        </section>
+
+        <!-- CARD 3 -->
+        <section class="card">
+            <div class="bismillah">بِسْمِ اللّهِ الرَّحْمنِ الرَّحِيم</div>
+            <div class="salam">Assalamu’alaikum Wr. Wb.</div>
+            
+            <p id="guest-greeting" style="font-size: 13px; font-weight: 600; color: var(--primary-pink); margin-bottom: 12px; display: none;"></p>
+
+            <p class="intro-text">
+                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan acara Tasyakuran Tasmiyah Aqiqah anak kami:
+            </p>
+
+            <div class="circle-photo">
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=400&q=80" alt="Raniya Naureen Zephyra">
+            </div>
+
+            <h2 class="baby-name">Raniya Naureen Zephyra</h2>
+            <p class="child-order">Putri Pertama dari</p>
+            <div class="parents-name">Muhammad Rifqi & Nur Marta Salsabilla</div>
+
+            <div class="divider"></div>
+
+            <p class="intro-text">
+                Dengan segala kerendahan hati kami berharap kehadiran Bapak/Ibu/Saudara/i dalam acara Tasyakuran Tasmiyah dan Aqiqah anak kami yang akan diselenggarakan pada:
+            </p>
+
+            <div class="info-block">
+                <div class="info-icon"><i class="fa-regular fa-calendar"></i></div>
+                <div class="info-title">Hari & Tanggal</div>
+                <div class="info-value">Minggu, 29 November 2026</div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="info-title">Waktu Acara</div>
+                <div class="info-value">Pukul 09.30 – 13.00 WITA</div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-title">Lokasi Acara</div>
+                <div class="info-value">Tempat Kediaman Kami</div>
+                <p class="info-subvalue">Jl. HKSN Komp. AMD Permai Blok B5 No.120, Alalak Utara, Banjarmasin</p>
+                <a href="https://maps.google.com/?q=Jl.+HKSN+Komp.+AMD+Permai+Blok+B5+No.120,+Alalak+Utara,+Banjarmasin" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fa-solid fa-map-location-dot"></i> Lihat Lokasi (Google Maps)
+                </a>
+            </div>
+
+            <div class="turut-mengundang">
+                <h4>TURUT MENGUNDANG</h4>
+                <ul>
+                    <li>Kel. H. Hamdan & Hj. Asiah</li>
+                    <li>Kel. Muhammad Amin & Robiah</li>
+                </ul>
+            </div>
+
+            <div class="decor-row" aria-hidden="true">👗 🧸 🎀</div>
+
+            <p class="closing-text">
+                <strong>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i dapat berhadir dan memberikan doa kepada putri kami.</strong><br><br>
+                Atas kehadiran serta Do'anya, kami ucapkan terima kasih.
+            </p>
+
+            <div class="salam" style="margin-bottom: 0;">Wassalamu’alaikum Wr. Wb.</div>
+        </section>
+
+    </div>
+
+    <!-- Floating Music Button -->
+    <button class="music-btn" id="musicBtn" title="Putar/Jeda Musik" aria-label="Putar atau Jeda Musik">
+        <i class="fa-solid fa-music"></i>
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Countdown Timer
+        const targetDate = new Date("2026-11-29T09:30:00+08:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Dynamic Guest Name (?to=Nama+Tamu)
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('to');
+        if (guestName) {
+            const greetingEl = document.getElementById('guest-greeting');
+            greetingEl.textContent = `Kepada Yth. Bapak/Ibu/Saudara/i: ${guestName}`;
+            greetingEl.style.display = 'block';
+        }
+
+        // Music Toggle
+        const musicBtn = document.getElementById('musicBtn');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (!bgMusic.querySelector('source').getAttribute('src')) {
+                musicBtn.classList.toggle('playing');
+                return;
+            }
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.classList.remove('playing');
+            } else {
+                bgMusic.play();
+                musicBtn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>
